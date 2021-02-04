@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+/* Khai báo biến trong css */
+
+:root {
+    --dark: #333333;
+    --dark-gray: #4f4f4f;
+    --white: #ffffff;
+}
+
+/* body */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.85rem 5.5rem 1rem;
+    background: var(--white);
+}
+/* color text - màu xám in đậm */
+header , .title, .dev-challenge-profile {
+    color: var(--dark);
+}
+
+header {
+    align-self: flex-start;
+    font-family: "Inconsolata", sans-serif;
+    font-weight: bold;
+    /* position: absolute; */
+    font-size: 24px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+/* container */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* image */
+
+.animation img {
+    width: 586px;
+    height: auto;
+}
+
+/* main */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    font-family: "Space Mono",sans-serif;
+}
+
+.title {
+    font-size: 64px;
+    line-height: 90px;
+    letter-spacing: -0.035em;
+}
+
+.infor {
+    font-size: 24px;
+    line-height: 35.54px;
+    letter-spacing: -0.035;
+    font-weight: normal;
+    color: var(--dark-gray);
+    padding: 2.57rem 0 2.57rem 0;;
+}
+
+.button-homepage {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--dark-gray);
+    padding: 1.6em 3em;
+    text-align: center;
+    width: max-content;
+    /* transition: background-color .1s; */
+}
+
+.button-homepage:hover {
+    background-color:  rgb(36, 180, 224);
+}
+
+/* footer */
+
+.dev-challenge-profile {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.dev-challenge-profile:hover {
+    text-decoration: underline;
+}
+
+/* small desktop */
+@media screen and (max-width: 1280px)
+{
+    .container {
+        transform: scale(0.7);
+    }
+}
+/* Mobile app */
+@media screen and (max-width: 800px) {
+    body {
+        padding: 1.42rem 1.72rem;
+    }
+    .container {
+        transform: scale(1);
+        flex-direction: column;
+    }
+    .animation{
+        margin: 4.75rem 0 4.2rem 0;
+        
+    }
+    .animation img {
+        width: 286px;
+        height: auto;
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    .title {
+        transform: scale(0.8);
+    }
+    .infor {
+        transform: scale(0.8);
+        padding: 2rem 0 2rem 0;
+    }
+    .button-homepage {
+        transform: scale(0.8);
+        margin: 0;
+    }
+    .dev-challenge-profile {
+        margin-top: 1px;
+    }
+}
